@@ -1,0 +1,21 @@
+{% load crispy_forms_tags% }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>contact us</title>
+</head>
+<body>
+<h2>Contact us</h2>
+
+<form method="post" action="">
+    {%csrf_token%}
+    {{key.as_p}}
+    <div class="form-actions">
+      <button type="submit">Send</button>
+    </div>
+</form>
+
+</body>
+</html>
