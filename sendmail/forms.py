@@ -1,5 +1,6 @@
 from django import forms
-
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
 
 class Contact_form(forms.Form):
     name=forms.CharField(max_length=10,required=True)
@@ -9,3 +10,8 @@ class Contact_form(forms.Form):
     message=forms.CharField(widget=forms.Textarea,required=True)
 
     
+class UserForm(forms.Form):
+
+    class Meta:
+        model= User
+        fields='__all__'
